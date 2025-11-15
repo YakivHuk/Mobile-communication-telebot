@@ -119,7 +119,7 @@ class MobileOperator:
 
             # Збереження абонентів
             f.write("=== Абоненти ===\n")
-            f.write(f"{\"Ім'я\":<15} {'Телефон':<15} {'Оператор':<10} {'Тариф':<15} {'Баланс (грн)':<10}\n")
+            f.write("{:<15} {:<15} {:<10} {:<15} {:<10}\n".format("Ім'я", "Телефон", "Оператор", "Тариф", "Баланс (грн)"))
             f.write("=" * 70 + "\n")
             for subscriber in self.subscribers:
                 f.write(f"{subscriber.name:<15} {subscriber.phone:<15} {subscriber.operator:<10} "
@@ -260,4 +260,5 @@ kyivstar.print_bonuses()
 lifecell.print_tariffs()
 lifecell.print_subscribers()
 lifecell.print_bonuses()
+
 
