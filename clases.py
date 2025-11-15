@@ -147,7 +147,7 @@ class MobileOperator:
 
     def print_subscribers(self):
         print(f"\nАбоненти оператора {self.name}:")
-        print(f"{\"Ім'я\":<15} {'Телефон':<15} {'Оператор':<10} {'Тариф':<15} {'Баланс (грн)':<10}")
+        print("{:<15} {:<15} {:<10} {:<15} {:<10}\n".format("Ім'я", "Телефон", "Оператор", "Тариф", "Баланс (грн)"))
         print("=" * 65)
         for subscriber in self.subscribers:
             print(f"{subscriber.name:<15} {subscriber.phone:<15} {subscriber.operator:<10} "
@@ -260,5 +260,6 @@ kyivstar.print_bonuses()
 lifecell.print_tariffs()
 lifecell.print_subscribers()
 lifecell.print_bonuses()
+
 
 
